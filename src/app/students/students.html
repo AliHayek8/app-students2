@@ -1,0 +1,9 @@
+<h2>Students List</h2>
+
+<ul>
+  <li *ngFor="let student of students">
+    {{ student.name }} - {{ student.grade }}
+    <span *ngIf="isPassed(student.grade)">✅ Passed</span>
+    <span *ngIf="!isPassed(student.grade)">❌ Failed</span>
+  </li>
+</ul>
